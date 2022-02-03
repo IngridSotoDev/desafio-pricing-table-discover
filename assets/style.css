@@ -1,0 +1,259 @@
+:root {
+  --yellow: #ffcc29;
+  --blue: #1d539e;
+  --gray: #828799;
+  --page-background: #f9fbfc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: var(--page-background);
+  height: 100vh;
+}
+
+header {
+  height: 450px;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .content {
+  margin-top: 100px;
+  max-width: 90vw;
+}
+
+header .content h1 {
+  max-width: 560px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+}
+
+header .content p {
+  max-width: 560px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 90vw;
+  margin: -150px auto;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: #eeeeee;
+  margin: 20px 0;
+}
+
+.table-pricing {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.table-pricing .item {
+  width: 355px;
+  height: 470px;
+  background: #ffffff;
+  box-shadow: 0px 1px 2px rgba(142, 150, 185, 0.25);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.table-pricing .item .item-title {
+  padding: 30px 30px 10px 30px;
+  border-radius: 8px 8px 0 0;
+}
+
+.table-pricing .item .item-title h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.table-pricing .item .item-body {
+  padding: 0 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.table-pricing .item .item-body .pricing {
+  margin: 10px 0;
+}
+
+.table-pricing .item .item-body .pricing .amount {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 49px;
+}
+
+.table-pricing .item .item-body .pricing .amount small {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.table-pricing .item .item-body .pricing .month {
+  font-size: 18px;
+  color: var(--gray);
+  line-height: 25px;
+  margin-left: 5px;
+}
+
+.table-pricing .item .item-body .description {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--gray);
+}
+
+.table-pricing .item .item-body .services {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.table-pricing .item .item-body .services .service {
+  display: flex;
+  gap: 15px;
+}
+
+.table-pricing .item .item-body .services .service img {
+  height: 18px;
+  width: 18px;
+}
+
+.table-pricing .item .item-body .services .service p {
+  color: var(--gray);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.table-pricing .item .item-body .button {
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: auto;
+  padding: 12px 24px;
+  width: 100%;
+
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+
+  transition: background-color .5s;
+}
+
+.table-pricing .item .item-body .button:hover {
+  background-color: #3579da;
+  color: #FFF;
+  border: 1px solid #3579da;
+}
+
+.table-pricing .item.popular {
+  height: 490px;
+}
+
+.table-pricing .item.popular .item-title {
+  display: flex;
+  padding: 30px 30px 10px 30px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--yellow);
+  padding: 22px 20px 22px 30px;
+  box-shadow: 0px 1px 2px rgba(142, 150, 185, 0.25);
+}
+
+.table-pricing .item.popular .item-title h3 {
+  color: var(--blue);
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.table-pricing .item.popular .item-title .label {
+  border-radius: 40px;
+  background-color: var(--blue);
+  padding: 8px 24px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.table-pricing .item.popular .button {
+  color: #fff;
+  background-color: var(--blue);
+  margin-bottom: 13px;
+  transition: background-color .5s;
+}
+
+.table-pricing .item.popular .button:hover {
+  background-color: #3579da;
+  border: 1px solid #3579da;
+}
+
+.table-pricing .item.popular .pricing {
+  margin-top: 10px;
+}
+
+
+@media (max-width: 1227px) {
+  .table-pricing .item {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1045px) {
+  .table-pricing {
+    flex-direction: column;
+  }
+
+  .table-pricing .item {
+    width: 355px;
+  }
+}
+
+@media (max-width: 613px) {
+  header .content {
+    margin-top: 70px;
+  }
+
+  header .content h1 {
+    font-size: 36px;
+  }
+
+  header .content p {
+    font-size: 16px;
+  }
+
+  .table-pricing .item {
+    width: 300px;
+  }
+}
+
+@media (max-width: 320px) {
+  .table-pricing .item {
+    width: 290px;
+  }
+}
